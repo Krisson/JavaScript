@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sober Calculator</title>
+
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td colspan="4" style="text-align: center; font-family: sans-serif;">
+            <h1> Calculator. </h1>
+            <p style="font-style: italic;">Try it out!</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4"><input type="text" id="txtField" placeholder="0" value="" disabled></td>
+
+    </tr>
+
+    <tr>
+        <td>
+            <button id="i7" value="7" onclick="pushBtn(this);">7</button>
+        </td>
+        <td>
+            <button id="i8" value="8" onclick="pushBtn(this);">8</button>
+        </td>
+        <td>
+            <button id="i9" value="9" onclick="pushBtn(this);">9</button>
+        </td>
+        <td>
+            <button class="btn" id="divide" value="divide" onclick="pushBtn(this);">/</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <button id="i4" value="4" onclick="pushBtn(this);">4</button>
+        </td>
+        <td>
+            <button id="i5" value="5" onclick="pushBtn(this);">5</button>
+        </td>
+        <td>
+            <button id="i6" value="6" onclick="pushBtn(this);">6</button>
+        </td>
+        <td>
+            <button class="btn" id="mult" value="x" onclick="pushBtn(this);">*</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <button id="i1" value="1" onclick="pushBtn(this);">1</button>
+        </td>
+        <td>
+            <button id="i2" value="2" onclick="pushBtn(this);">2</button>
+        </td>
+        <td>
+            <button id="i3" value="3" onclick="pushBtn(this);">3</button>
+        </td>
+        <td>
+            <button class="btn" id="sub" value="-" onclick="pushBtn(this);">-</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <button id="i0" value="0" onclick="pushBtn(this);">0</button>
+        </td>
+        <td>
+            <button class="btn" id="del" value="ce" onclick="pushBtn(this);">CE</button>
+        </td>
+        <td>
+            <input type="button" class="eq" id="res" value="=" onclick="pushBtn(this)"/>
+        </td>
+        <td>
+            <button class="btn" id="add" value="+" onclick="pushBtn(this);">+</button>
+        </td>
+    </tr>
+
+</table>
+<script src="js/script.js"></script>
+</body>
+</html>
