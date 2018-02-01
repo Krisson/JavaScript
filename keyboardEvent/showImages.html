@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OnKeyDown | Show/Hide Images</title>
+
+    <style>
+        .wrapper {
+            width: 520px;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .imgH {
+            visibility: visible;
+        }
+
+        .wrapper h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <h1>Press 1, 2, 3, 4, 5 or 6.</h1>
+    <img id="i1" class="imgH" src="https://static.pexels.com/photos/145939/pexels-photo-145939.jpeg" alt="tiger"/>
+
+    <img id="i2" class="imgH" src="http://animals.sandiegozoo.org/sites/default/files/2016-09/animals_hero_panda.jpg"
+         alt="panda"/>
+
+    <img id="i3" class="imgH"
+         src="http://r.ddmcdn.com/s_f/o_1/cx_297/cy_0/cw_1201/ch_1201/w_720/APL/uploads/2014/08/wild-animal-safari-zebra-5371037.jpg"
+         alt="zebra"/>
+
+    <img id="i4" class="imgH"
+         src="http://animals.sandiegozoo.org/sites/default/files/2016-09/animals_hero_armadillo_0.jpg"
+         alt="armadillo"/>
+
+    <img id="i5" class="imgH" src="http://animals.sandiegozoo.org/sites/default/files/2016-10/animals_hero_fennec2.jpg"
+         alt="fenec"/>
+</div>
+
+<script>
+    var body = document.querySelector('body');
+
+    function hide() {
+        var x = document.getElementsByTagName('img');
+        for (var i = 0; i < x.length; i++) {
+            console.log(x[i].style.visibility = "hidden"); //second console output
+        }
+
+    }
+
+    body.onkeydown = function (e) {
+        if (!e.metaKey) {
+            e.preventDefault();
+        }
+        if (e.key == 1) {
+            var x = document.getElementById('i1');
+            hide();
+            x.style.visibility = "visible";
+
+        }
+        if (e.key == 2) {
+            var y = document.getElementById('i2');
+            hide();
+            y.style.visibility = "visible";
+        }
+        if (e.key == 3) {
+            var z = document.getElementById('i3');
+            hide();
+            z.style.visibility = "visible";
+        }
+        if (e.key == 4) {
+            var r = document.getElementById('i4');
+            hide();
+            r.style.visibility = "visible";
+        }
+        if (e.key == 5) {
+            var s = document.getElementById('i5');
+            hide();
+            s.style.visibility = "visible";
+        }
+
+        function show() {
+            var x = document.getElementsByTagName('img');
+            for (var i = 0; i < x.length; i++) {
+                console.log(x[i].style.visibility = "visible"); //second console output
+            }
+
+        }
+
+        if (e.key == 6) {
+            show();
+        }
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onKeyDown | Show Keys</title>
+</head>
+
+<style rel="stylesheet">
+    .wrapper {
+        width: 504px;
+        margin: 0 auto;
+    }
+
+    #okd {
+        width: 498px;
+        background: #fff;
+    }
+
+    button {
+        float: right;
+        padding: 5px 25px;
+    }
+</style>
+
+<body>
+
+<div class="wrapper">
+
+    <h3 style="text-align: center;">This example will output on screen keys you press on the keyboard.</h3>
+
+    <textarea id="okd" rows="30" placeholder="Write something.." disabled></textarea>
+
+    <button onclick="reset()">Reset</button>
+
+</div>
+
+<script>
+    var keyCodes = {
+        65: "a"
+    };
+
+    var body = document.querySelector('body');
+
+    body.onkeydown = function (e) {
+        if (!e.metaKey) {
+            e.preventDefault();
+        }
+        document.getElementById('okd').innerHTML += e.key + ",";
+        console.log(e.key);
+    };
+
+    function reset() {
+        document.getElementById('okd').innerHTML = "";
+
+    }
+</script>
+
+</body>
+</html>
